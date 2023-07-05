@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import { FlatList, ScrollView, TextInput } from "react-native-gesture-handler";
 import { AntDesign } from "@expo/vector-icons";
+import { SafeAreaView } from "react-native-safe-area-context";
 const searchPost = [
   {
     id: 1,
@@ -127,6 +128,7 @@ const Search = () => {
   };
 
   return (
+    <SafeAreaView style={{ flex: 1 }}>
     <View style={{ flex: 1 }}>
       <View
         style={{
@@ -180,7 +182,7 @@ const Search = () => {
         }}
       />
     </View>
-    //  </ScrollView>
+    </SafeAreaView>
   );
 };
 
